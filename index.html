@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/ea11937113.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <title>SABER-AZIAT</title>
+</head>
+<body>
+    <canvas id="stars-bg"></canvas>
+    <div class="container"></div>
+    <nav>
+        <div class="navbar-brand">
+            <span class="navbar-aziat">aziat</span> <span class="navbar-saber">saber</span>
+        </div>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div id="header">
+        <div class="container home-flex">
+            <div class="home-left">
+                <div class="header-text animate-on-scroll">
+                    <p>HELLO IT'S ME</p>
+                    <h1>AZIAT <span>SABER</span> <br> FULL STACK  <br><span>DEVELOPER</span></h1>
+                    <div class="typewriter-container"><span id="typewriter"></span></div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <a href="photos/aziat.saber.pdf" download class="btn btn2"><i class="fa-solid fa-download"></i> Download CV</a>
+            </div>
+            <div class="home-right animate-on-scroll">
+                <figure class="photo-figure">
+                    <img src="photos/2.png" alt="Saber Aziat" class="main-photo">
+                    <div class="photo-effect"></div>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1 animate-on-scroll">
+                </div>
+                <div class="about-col-2 animate-on-scroll">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate and motivated software development student, specializing in object-oriented programming and web development. With a strong ability to solve complex problems and an analytical mindset, I am eager to contribute to creative projects using my skills in C++, PHP, and frameworks like Laravel and Raylib to design innovative and high-performance solutions.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skills-group">
+                            <div class="skills-subtitle programming">Programming Languages</div>
+                            <div class="skills-carousel">
+                                <div class="skills-icons">
+                                    <div class="skills-icon-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-subtitle databases">Databases</div>
+                            <div class="skills-carousel">
+                                <div class="skills-icons">
+                                    <div class="skills-icon-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                                    <div class="skills-icon-item"><i class="fa-solid fa-database" style="color:#ff2222;"></i><span>Vector DB</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-subtitle frameworks">Frameworks & Libraries</div>
+                            <div class="skills-carousel">
+                                <div class="skills-icons">
+                                    <div class="skills-icon-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+                                    <div class="skills-icon-item"><i class="fa-solid fa-gamepad" style="color:#ff2222;"></i><span>Raylib</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-subtitle systems">Systems & Tools</div>
+                            <div class="skills-carousel">
+                                <div class="skills-icons">
+                                    <div class="skills-icon-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-github-original colored"></i><span>Github</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-gitlab-plain colored"></i><span>Gitlab</span></div>
+                                    <div class="skills-icon-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+                                    <div class="skills-icon-item"><i class="fa-solid fa-computer" style="color:#ff2222;"></i><span>IT System</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-subtitle modeling"> Modelling </div>
+                            <div class="skills-carousel">
+                                <div class="skills-icons">
+                                    <div class="skills-icon-item"><i class="fa-solid fa-project-diagram"></i><span>Merise</span></div>
+                                    <div class="skills-icon-item"><i class="fa-solid fa-sitemap"></i><span>UML</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><img src="photos/1.jpg" alt="Logo entreprise" style="height:22px;width:auto;vertical-align:middle;margin-right:8px;"><span class="red-title">Stage PFE Developer Web</span><br>Stage de 2 mois PFE chez SMART AUTOMATION TECHNOLOGIE, développement d'une plateform communite hebride "GROUPE TO".</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span class="red-title">2025 - Faculty of Science and Technology</span><br>Bachelor's Degree in Software Application Engineering</li>
+                            <li><span class="red-title">2025 - Faculty of Science and Technology</span><br>University Diploma in Science and Technology</li>
+                            <li><span class="red-title">2021 - Lycée Dehar Ben Ayad</span><br>Scientific Baccalaureate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">MY services</h1>
+            <div class="services-list">
+                <div class="service-card animate-on-scroll">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Design and development of responsive and dynamic websites using modern technologies to ensure high performance and user engagement.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Creating intuitive and visually appealing user interfaces for web and mobile applications, ensuring a seamless user experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Mobile App Development</h2>
+                    <p>Building high-performance Android and iOS applications with modern frameworks like React Native and Flutter.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Development</h2>
+                    <p>Developing engaging 2D and 3D games using frameworks like Raylib, focusing on immersive gameplay and smooth performance.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">MY Work</h1>
+            <div class="work-list" id="work-list-main">
+                <div class="work animate-on-scroll">
+                    <img src="photos/Group 2.png">
+
+                    <div class="layer">
+                        <h3>Communite hybride "GROUPE TO "</h3>
+                        <p>Creation d'un communite hybride utilise chatbot inteligent </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                <div class="work animate-on-scroll">
+                    <img src="photos/logo.png">
+                    <div class="layer">
+                        <h3>Plateform generer des evenement </h3>
+                        <p>plateform qui generer des evenement acadymique comme remmise diplome , conference et festive comme mariage , anniversaire , utulise chatbot inteligent </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work animate-on-scroll">
+                    <img src="photos/image.png">
+                    <div class="layer">
+                        <h3>GAME OF MAZE </h3>
+                        <p>jeux maze contient 3 deficulte avec la posibile de faire 2 joeur ou seulement individuel , avec top scor </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="work-list" id="work-list-more" style="display:none;">
+                <!-- 4 nouveaux projets à afficher dynamiquement -->
+            </div>
+            <a href="#" class="btn" id="see-more-btn">see more</a>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left animate-on-scroll">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> hhyvvv@ex.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0711929885</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="photos/aziat.saber.pdf" download class="btn btn2"><i class="fa-solid fa-download"></i> Download CV</a>
+                </div>
+                <div class="contact-right animate-on-scroll">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Lorem ipsum dolor sit. <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    <!-- Modale Service -->
+    <div id="service-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+        <h2 id="service-modal-title"></h2>
+        <p id="service-modal-desc"></p>
+      </div>
+    </div>
+    <!-- Modale Work -->
+    <div id="work-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeWorkModal()">&times;</span>
+        <h2 id="work-modal-title"></h2>
+        <p id="work-modal-desc"></p>
+        <video id="work-modal-video" controls style="width:100%;margin-top:10px;display:none;"></video>
+      </div>
+    </div>
+    <script src="portfolio.js"></script>
+</body>
+</html> 
