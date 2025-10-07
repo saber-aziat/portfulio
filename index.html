@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://kit.fontawesome.com/ea11937113.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <title>My Portfolio</title>
+    <title>Saber Aziat</title>
 </head>
 <body>
     <div id="landing" aria-hidden="false">
@@ -25,10 +25,11 @@
         </div>
         <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact Me</a></li>
             <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -52,9 +53,8 @@
                 <a href="photos/aziat.saber.pdf" download class="btn btn2 btn-compact"><i class="fa-solid fa-download"></i> Download CV</a>
             </div>
             <div class="home-right animate-on-scroll">
-                <figure class="photo-figure">
+                <figure class="photo-figure photo-bordered">
                     <img src="photos/2.png" alt="Saber Aziat" class="main-photo">
-                    <div class="photo-effect"></div>
                 </figure>
             </div>
         </div>
@@ -62,126 +62,144 @@
     <!-- About Section -->
     <div id="about">
         <div class="container">
-            <div class="row">
+            <div class="row about-layout">
+                <!-- Photo right, text left -->
                 <div class="about-col-1 animate-on-scroll">
+                    <img src="photos/2.png" alt="Aziat Saber" class="about-photo photo-bordered photo-animated">
                 </div>
                 <div class="about-col-2 animate-on-scroll">
                     <h1 class="sub-title">About Me</h1>
                     <p>Passionate and motivated software development student, specializing in object-oriented programming and web development. With a strong ability to solve complex problems and an analytical mindset, I am eager to contribute to creative projects using my skills in C++, PHP, and frameworks like Laravel and Raylib to design innovative and high-performance solutions.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <div class="skills-group">
-                            <div class="skills-subtitle programming">Programming Languages</div>
-                            <div class="skills-carousel">
-                                <div class="skills-icons">
-                                    <div class="skills-icon-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-group">
-                            <div class="skills-subtitle databases">Databases</div>
-                            <div class="skills-carousel">
-                                <div class="skills-icons">
-                                    <div class="skills-icon-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
-                                    <div class="skills-icon-item"><i class="fa-solid fa-database" style="color:#ff2222;"></i><span>Vector DB</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-group">
-                            <div class="skills-subtitle frameworks">Frameworks & Libraries</div>
-                            <div class="skills-carousel">
-                                <div class="skills-icons">
-                                    <div class="skills-icon-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-react-original colored"></i><span>React Native</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
-                                    <div class="skills-icon-item"><i class="fa-solid fa-gamepad" style="color:#ff2222;"></i><span>Raylib</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-group">
-                            <div class="skills-subtitle systems">Systems & Tools</div>
-                            <div class="skills-carousel">
-                                <div class="skills-icons">
-                                    <div class="skills-icon-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-github-original colored"></i><span>Github</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-gitlab-plain colored"></i><span>Gitlab</span></div>
-                                    <div class="skills-icon-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
-                                    <div class="skills-icon-item"><i class="fa-solid fa-computer" style="color:#ff2222;"></i><span>IT System</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-group">
-                            <div class="skills-subtitle modeling"> Modelling </div>
-                            <div class="skills-carousel">
-                                <div class="skills-icons">
-                                    <div class="skills-icon-item"><i class="fa-solid fa-project-diagram"></i><span>Merise</span></div>
-                                    <div class="skills-icon-item"><i class="fa-solid fa-sitemap"></i><span>UML</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><img src="photos/1.jpg" alt="Logo entreprise" style="height:22px;width:auto;vertical-align:middle;margin-right:8px;"><span class="red-title">Stage PFE Developer Web</span><br>Stage de 2 mois PFE chez SMART AUTOMATION TECHNOLOGIE, développement d'une plateform communite hebride "GROUPE TO".</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span class="red-title">2025 - Faculty of Science and Technology</span><br>Bachelor's Degree in Software Application Engineering</li>
-                            <li><span class="red-title">2025 - Faculty of Science and Technology</span><br>University Diploma in Science and Technology</li>
-                            <li><span class="red-title">2021 - Lycée Dehar Ben Ayad</span><br>Scientific Baccalaureate</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
+    <!-- Skills Section -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">Skills</h1>
+            <div class="skills-content modern-skills">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills-tab')">Programming </p>
+                    <p class="tab-links" onclick="opentab('experience-tab')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education-tab')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills-tab">
+                    <div class="skills-three-columns">
+                        <!-- Langages -->
+                        <div class="skills-col">
+                            <h2 class="skills-col-title">Languages</h2>
+                            <div class="skills-grid">
+                                <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+                                <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+                                <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                                <div class="skill-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                                <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                                <div class="skill-item"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                                <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+                                <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                                <div class="skill-item"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
+                                <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                                <div class="skill-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                            </div>
+                        </div>
+                        <!-- Frameworks -->
+                        <div class="skills-col">
+                            <h2 class="skills-col-title">Frameworks</h2>
+                            <div class="skills-grid">
+                                <div class="skill-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                                <div class="skill-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+                            </div>
+                        </div>
+                        <!-- Database + Tools & Planning -->
+                        <div class="skills-col">
+                            <h2 class="skills-col-title">Database</h2>
+                            <div class="skills-grid">
+                                <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                                <div class="skill-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                                <div class="skill-item"><i class="fa-solid fa-database" style="color:#ff2222;"></i><span>Vector DB</span></div>
+                            </div>
+                            <h2 class="skills-col-title" style="margin-top:32px;">Tools & Planning</h2>
+                            <div class="skills-grid">
+                                <div class="skill-item"><i class="fa-solid fa-sitemap"></i><span>UML</span></div>
+                                <div class="skill-item"><i class="fa-solid fa-project-diagram"></i><span>Merise</span></div>
+                                <div class="skill-item"><i class="fa-solid fa-code"></i><span>VSCode</span></div>
+                                <div class="skill-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+                                <div class="skill-item"><i class="fa-solid fa-robot"></i><span>AI Dev Agent</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contents" id="experience-tab">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <!-- Add company logo before title -->
+                            <img src="photos/1.jpg" alt="Logo entreprise" style="height:22px;width:auto;vertical-align:middle;margin-right:8px;">
+                            <h3 style="display:inline;">Stage PFE – Developer Web</h3>
+                            <p class="timeline-company">SMART AUTOMATION TECHNOLOGIE</p>
+                            <p class="timeline-description">Stage de 2 mois PFE, développement d'une plateforme communautaire hybride "GROUPE TO".</p>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contents" id="education-tab">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Licence Professionnelle Ingénierie de development des  Applications informatiques</h3>
+                            <p class="timeline-company">Faculté des Sciences et Techniques, Tanger</p>
+                            <span class="timeline-date">2022-2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Diplôme Universitaire en Sciences et Techniques (DUST)</h3>
+                            <p class="timeline-company">Faculté des Sciences et Techniques, Tanger</p>
+                            <span class="timeline-date">2020-2022</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Baccalauréat Scientifique</h3>
+                            <p class="timeline-company">Lycée Dehar Ben Ayad, Tétouan</p>
+                            <span class="timeline-date">2017-2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Services Section -->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">MY services</h1>
+            <h1 class="sub-title">Services</h1>
             <div class="services-list">
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
+                <!-- Change shadow to yellow for all service cards -->
+                <div class="service-card animate-on-scroll service-yellow-shadow">
+                    <i class="fa-solid fa-code service-icon-yellow"></i>
+                    <h2 class="service-title-yellow">Web Development</h2>
                     <p>Design and development of responsive and dynamic websites using modern technologies to ensure high performance and user engagement.</p>
                     <a href="#">Learn more</a>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
+                <div class="service-card animate-on-scroll service-yellow-shadow">
+                    <i class="fa-solid fa-crop service-icon-yellow"></i>
+                    <h2 class="service-title-yellow">UI/UX Design</h2>
                     <p>Creating intuitive and visually appealing user interfaces for web and mobile applications, ensuring a seamless user experience.</p>
                     <a href="#">Learn more</a>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Mobile App Development</h2>
+                <div class="service-card animate-on-scroll service-yellow-shadow">
+                    <i class="fa-brands fa-app-store service-icon-yellow"></i>
+                    <h2 class="service-title-yellow">Mobile App Development</h2>
                     <p>Building high-performance Android and iOS applications with modern frameworks like React Native and Flutter.</p>
                     <a href="#">Learn more</a>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>Game Development</h2>
+                <div class="service-card animate-on-scroll service-yellow-shadow">
+                    <i class="fa-solid fa-gamepad service-icon-yellow"></i>
+                    <h2 class="service-title-yellow">Game Development</h2>
                     <p>Developing engaging 2D and 3D games using frameworks like Raylib, focusing on immersive gameplay and smooth performance.</p>
                     <a href="#">Learn more</a>
                 </div>
@@ -189,12 +207,10 @@
         </div>
     </div>
 
-
-
     <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">MY Work</h1>
+            <h1 class="sub-title">My Work</h1>
             <div class="work-list" id="work-list-main">
                 <div class="work animate-on-scroll">
                     <img src="photos/Group 2.png">
@@ -234,9 +250,9 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left animate-on-scroll">
-                    <h1 class="sub-title">Contact me</h1>
-                    <p><i class="fa-solid fa-envelope"></i> hhyvvv@ex.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 0711929885</p>
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> aziatsaber73@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +212 711 929 885</p>
                     <div class="social-icons">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -247,17 +263,18 @@
                     <a href="photos/aziat.saber.pdf" download class="btn btn2 btn-compact"><i class="fa-solid fa-download"></i> Download CV</a>
                 </div>
                 <div class="contact-right animate-on-scroll">
-                    <form name="submit-to-google-sheet">
+                    <form name="submit-to-google-sheet" id="contact-form">
                         <input type="text" name="Name" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your email" required>
                         <textarea name="Message" rows="6" placeholder="Your message"></textarea>
                         <button type="submit" class="btn btn2">submit</button>
                     </form>
+                    <div id="contact-alert" class="contact-alert"></div>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <p>Lorem ipsum dolor sit. <i class="fa-solid fa-heart"></i></p>
+            <p>Saber Aziat <i class="fa-solid fa-heart"></i></p>
         </div>
     </div>
     <!-- Modale Service -->
@@ -279,4 +296,4 @@
     </div>
     <script src="portfolio.js"></script>
 </body>
-</html> 
+</html>

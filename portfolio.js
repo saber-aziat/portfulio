@@ -168,7 +168,7 @@ const navObserver = new IntersectionObserver((entries) => {
 }, navObserverOptions);
 
 // Observer toutes les sections principales
-document.querySelectorAll('#header, #about, #services, #portfolio, #contact').forEach((section) => {
+document.querySelectorAll('#header, #about, #skills, #services, #portfolio, #contact').forEach((section) => {
     navObserver.observe(section);
 });
 
@@ -532,6 +532,12 @@ let isDeleting = false;
 let typewriterDelay = 80;
 let typewriterPause = 1200;
 
+// Ajouter le style jaune au typewriter
+if (typewriterElem) {
+    typewriterElem.style.color = 'var(--yellow-accent)';
+    typewriterElem.style.textShadow = '0 0 15px rgba(255,215,0,0.5)';
+}
+
 function typewriterLoop() {
     if (!typewriterElem) return;
     const currentText = typewriterTexts[typewriterIndex];
@@ -633,4 +639,38 @@ seeMoreBtn.addEventListener('click', function(e) {
         workListMore.style.display = 'none';
         seeMoreBtn.textContent = 'see more';
     }
-}); 
+});
+
+// Contact form alert
+document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.getElementById('contact-form');
+    var contactAlert = document.getElementById('contact-alert');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            contactAlert.textContent = "Oops! Il y a eu une erreur, veuillez réessayer.";
+            contactAlert.style.display = "block";
+            contactAlert.style.background = "linear-gradient(90deg,#FFD600 60%,#fffbe7 100%)";
+            contactAlert.style.color = "#222";
+            setTimeout(function() {
+                contactAlert.style.display = "none";
+            }, 4000);
+        });
+    }
+});
+
+// Optional: Animate on scroll for .animate-on-scroll
+function animateOnScroll() {
+    var elements = document.querySelectorAll('.animate-on-scroll');
+    var windowHeight = window.innerHeight;
+    elements.forEach(function(el) {
+        var position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 60) {
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+            el.style.transition = "opacity 0.7s, transform 0.7s";
+        }
+    });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('DOMContentLoaded', animateOnScroll);

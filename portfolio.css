@@ -40,6 +40,56 @@ html, body {
     opacity: 1;
     transition: opacity 700ms ease, transform 700ms ease;
     will-change: opacity, transform;
+    overflow: hidden;
+}
+
+#landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255,215,0,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,0,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255,215,0,0.06) 0%, transparent 50%);
+    animation: backgroundPulse 8s ease-in-out infinite;
+    z-index: -1;
+}
+
+#landing::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.02) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(255,215,0,0.03) 50%, transparent 70%);
+    animation: backgroundRotate 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes backgroundRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #landing.hidden {
@@ -479,7 +529,7 @@ nav .fa-bars, nav .fa-circle-xmark {
     transition: all 0.1s;
 }
 
-#about, #services, #portfolio, #contact {
+#about, #skills, #services, #portfolio, #contact {
     margin-top: 100px;
     position: relative;
     z-index: 2;
@@ -490,6 +540,48 @@ nav .fa-bars, nav .fa-circle-xmark {
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
+}
+
+.about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.about-layout .about-col-2 {
+    flex: 1 1 60%;
+    order: 1;
+}
+
+.about-layout .about-col-1 {
+    flex: 1 1 35%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 30px 8px rgba(255,215,0,0.2), 
+        0 0 50px 15px rgba(255,215,0,0.1), 
+        0 0 0 5px rgba(255,215,0,0.1),
+        0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.about-photo:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(5deg) scale(1.05);
+    box-shadow: 
+        0 0 40px 10px rgba(255,215,0,0.3), 
+        0 0 60px 20px rgba(255,215,0,0.2), 
+        0 0 0 8px rgba(255,215,0,0.15),
+        0 15px 40px rgba(0,0,0,0.4);
 }
 
 .about-col-1 img {
@@ -606,6 +698,10 @@ nav .fa-bars, nav .fa-circle-xmark {
 
 .service-card a:hover {
     text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.service-yellow-shadow {
+    box-shadow: 0 4px 24px #ffe60055, 0 0 40px #ffe60033;
 }
 
 .work-list {
@@ -1046,4 +1142,280 @@ form .btn2 {
     border-radius: 16px;
     box-shadow: 0 0 24px 4px rgba(255,255,255,0.1), 0 0 10px 2px rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
-} 
+}
+
+/* Skills Section Styles */
+.skills-content {
+    margin-top: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    background: var(--main-dark-gray);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(26,26,26,0.9);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: var(--main-accent);
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.5));
+}
+
+.skill-item span {
+    color: var(--main-white);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover span {
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* Timeline Styles pour Skills */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    bottom: -40px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--yellow-accent), var(--main-accent));
+    border-radius: 1px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -7px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: var(--yellow-accent);
+    border-radius: 50%;
+    border: 3px solid var(--main-dark-gray);
+    box-shadow: 0 0 15px rgba(255,215,0,0.5);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--main-dark-gray);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.timeline-content h3 {
+    color: var(--main-accent);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.timeline-company {
+    color: var(--yellow-accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255,215,0,0.4);
+}
+
+.timeline-description {
+    color: var(--main-white);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.timeline-date {
+    color: var(--main-light-gray);
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+
+/* Responsive pour About Me et Skills */
+@media (max-width: 900px) {
+    .about-layout {
+        flex-direction: column;
+    }
+    
+    .about-layout .about-col-2 {
+        order: 2;
+        flex: 1 1 100%;
+    }
+    
+    .about-layout .about-col-1 {
+        order: 1;
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+    
+    .about-photo {
+        max-width: 250px;
+    }
+    
+    .skills-content {
+        margin-top: 30px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+    }
+    
+    .skill-item {
+        padding: 15px 10px;
+    }
+    
+    .skill-item i {
+        font-size: 2rem;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajout d'un style animé et stylé pour la photo dans About Me */
+.photo-animated {
+    box-shadow:
+        0 0 40px 10px #ffe600,
+        0 0 80px 30px #ffe60044,
+        0 0 0 8px #fffbe6,
+        0 10px 30px rgba(0,0,0,0.25);
+    border: 3px solid #ffe600;
+    animation: photoGlow 2.5s infinite alternate, photoRotate 8s linear infinite;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes photoGlow {
+    0% {
+        box-shadow:
+            0 0 40px 10px #ffe600,
+            0 0 80px 30px #ffe60044,
+            0 0 0 8px #fffbe6,
+            0 10px 30px rgba(0,0,0,0.25);
+        border-color: #ffe600;
+    }
+    100% {
+        box-shadow:
+            0 0 60px 20px #ffe600,
+            0 0 120px 50px #ffe60088,
+            0 0 0 12px #fffbe6,
+            0 15px 40px rgba(0,0,0,0.35);
+        border-color: #ffd700;
+    }
+}
+
+@keyframes photoRotate {
+    0% { transform: rotate(-2deg) scale(1); }
+    50% { transform: rotate(2deg) scale(1.04); }
+    100% { transform: rotate(-2deg) scale(1); }
+}
+
+/* Effet décoratif animé autour de la photo */
+.photo-animated::after {
+    content: '';
+    position: absolute;
+    top: -18px; left: -18px; right: -18px; bottom: -18px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,0,0.12) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+    animation: photoAura 3s infinite alternate;
+}
+
+@keyframes photoAura {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.9; }
+}
+
+/* Nouvelle section Skills à trois colonnes */
+.skills-three-columns {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.skills-col {
+    flex: 1 1 0;
+    min-width: 220px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skills-col-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--yellow-accent);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #ffe60055;
+}
+.skills-col .skills-grid {
+    width: 100%;
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .skills-three-columns {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .skills-col {
+        max-width: 100%;
+    }
+}
